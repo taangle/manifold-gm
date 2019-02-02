@@ -1,4 +1,7 @@
 /// @desc Initialize global enums and so forth
+
+randomize()
+
 enum ShapeType {
 	RECTANGLE,
 	TRIANGLE
