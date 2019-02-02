@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "103e66e7-6379-4747-9443-1181a7318559",
+            "Value": {
+                "id": "781d5738-843d-45bc-bcda-d6089291a130",
+                "resourcePath": "objects\\oTransformation\\oTransformation.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b312e07-0b37-4999-9b2b-28d98e7fc196",
             "Value": {
                 "id": "f2ee84aa-3f4d-49e0-b71c-e4e97fe56aac",
@@ -172,6 +180,14 @@
                 "id": "1b6a5ab8-e236-4272-9865-10cb5fa92ad4",
                 "resourcePath": "views\\b2f6926b-a394-4f12-8873-488c6d73eee8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c6f8b408-83aa-4351-9fb3-6b1aefdd6ba0",
+            "Value": {
+                "id": "71b91e71-1df3-4879-bdaa-36ce43817366",
+                "resourcePath": "objects\\oRectTransformation\\oRectTransformation.yy",
+                "resourceType": "GMObject"
             }
         },
         {
