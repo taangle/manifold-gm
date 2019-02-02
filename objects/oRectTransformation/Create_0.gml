@@ -1,6 +1,6 @@
 /// @desc 
-leftDiff = 0
-rightDiff = 0
-topDiff = 0
-bottomDiff = 0
-colorDiff = 0
+newLeft = 0
+newRight = 0
+newTop = 0
+newBottom = 0
+newColor = 0
