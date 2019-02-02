@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "20efdb95-0851-4e9f-aacd-4046ec873549",
+            "Value": {
+                "id": "7a52365f-1ed3-4556-8c53-9f6c899b27f9",
+                "resourcePath": "objects\\oShape\\oShape.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b312e07-0b37-4999-9b2b-28d98e7fc196",
             "Value": {
                 "id": "f2ee84aa-3f4d-49e0-b71c-e4e97fe56aac",
