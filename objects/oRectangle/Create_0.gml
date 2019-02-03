@@ -21,7 +21,7 @@ yPositions[0] = y
 
 xMovement = choose(-1,0,1)
 yMovement = choose(-1,0,1)
-for (var time = 1; time < room_width; time++) {
+for (var time = 1; time < oScene.finalTime; time++) {
 	xPositions[time] = xPositions[time - 1] + xMovement
 	yPositions[time] = yPositions[time - 1] + yMovement
 }
@@ -33,14 +33,14 @@ firstTrans.newRight = baseRight
 firstTrans.newBottom = baseBottom
 firstTrans.newTop = baseTop
 firstTrans.newColor = baseColor
-transformations[room_height/2] = firstTrans
+transformations[oScene.midMan] = firstTrans
 
 uLeftTrans = choose(-1,0,1)
 uRightTrans = choose(-1,0,1)
 uTopTrans = choose(-1,0,1)
 uBottomTrans = choose(-1,0,1)
 uColorTrans = choose(-1,0,1)
-for (var manHeight = (room_height/2) - 1; manHeight >= 0; manHeight--) {
+for (var manHeight = oScene.midMan - 1; manHeight >= 0; manHeight--) {
 	var transformation = instance_create_depth(0,0,0,oRectTransformation)
 	transformation.newLeft = transformations[manHeight + 1].newLeft + uLeftTrans
 	transformation.newRight = transformations[manHeight + 1].newRight + uRightTrans
@@ -55,7 +55,7 @@ dRightTrans = choose(-1,0,1)
 dTopTrans = choose(-1,0,1)
 dBottomTrans = choose(-1,0,1)
 dColorTrans = choose(-1,0,1)
-for (var manHeight = (room_height/2) + 1; manHeight < room_height; manHeight++) {
+for (var manHeight = oScene.midMan + 1; manHeight < oScene.highestMan; manHeight++) {
 	var transformation = instance_create_depth(0,0,0,oRectTransformation)
 	transformation.newLeft = transformations[manHeight - 1].newLeft + dLeftTrans
 	transformation.newRight = transformations[manHeight - 1].newRight + dRightTrans

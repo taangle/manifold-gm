@@ -1,11 +1,11 @@
 /// @desc Tell each shape to move and change how we want it to
 
-time = max(0, mouse_x)
-time = min(room_width - 1, time)
+time = max(0, mouse_x/2)
+time = min(finalTime, time)
 show_debug_message("~~time: " + string(time))
 
-manHeight = max(0, mouse_y)
-manHeight = min(room_height - 1, manHeight)
+manHeight = max(0, mouse_y/2)
+manHeight = min(highestMan, manHeight)
 show_debug_message("~~manHeight: " + string(manHeight))
 
 
