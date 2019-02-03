@@ -11,7 +11,9 @@ for (var i = shapeCount - 1; i >= 0; i--) {
 	var shape
 	switch (type) {
 		case ShapeType.RECTANGLE:
-			shape = instance_create_depth(0, 0, 0, oRectangle)
+			var xSpawn = irandom(room_width - 1)
+			var ySpawn = irandom(room_height - 1)
+			shape = instance_create_depth(xSpawn, ySpawn, 0, oRectangle)
 	}
 	shapes[i] = shape	
 }

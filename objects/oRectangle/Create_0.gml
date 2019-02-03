@@ -3,6 +3,7 @@
 var smallestHalf = 8
 var largestHalf = 64
 baseLeft = irandom_range(smallestHalf, largestHalf)
+show_debug_message("~~baseLeft: " + string(baseLeft))
 baseRight = irandom_range(smallestHalf, largestHalf)
 baseTop = irandom_range(smallestHalf, largestHalf)
 baseBottom = irandom_range(smallestHalf, largestHalf)
@@ -20,9 +21,9 @@ yPositions[0] = y
 
 xMovement = choose(-1,0,1)
 yMovement = choose(-1,0,1)
-for (var xPos = 1; xPos < room_width; xPos++) {
-	xPositions[xPos] = xPositions[xPos - 1] + xMovement
-	yPositions[xPos] = yPositions[xPos - 1] + yMovement
+for (var time = 1; time < room_width; time++) {
+	xPositions[time] = xPositions[time - 1] + xMovement
+	yPositions[time] = yPositions[time - 1] + yMovement
 }
 
 // Set up transformation array
@@ -39,14 +40,14 @@ uRightTrans = choose(-1,0,1)
 uTopTrans = choose(-1,0,1)
 uBottomTrans = choose(-1,0,1)
 uColorTrans = choose(-1,0,1)
-for (var yPos = (room_height/2) - 1; yPos >= 0; yPos--) {
+for (var manHeight = (room_height/2) - 1; manHeight >= 0; manHeight--) {
 	var transformation = instance_create_depth(0,0,0,oRectTransformation)
-	transformation.newLeft = transformations[yPos + 1] + uLeftTrans
-	transformation.newRight = transformations[yPos + 1] + uRightTrans
-	transformation.newBottom = transformations[yPos + 1] + uBottomTrans
-	transformation.newTop = transformations[yPos + 1] + uTopTrans
-	transformation.newColor = transformations[yPos + 1] + uColorTrans
-	transformations[yPos] = transformation
+	transformation.newLeft = transformations[manHeight + 1].newLeft + uLeftTrans
+	transformation.newRight = transformations[manHeight + 1].newRight + uRightTrans
+	transformation.newBottom = transformations[manHeight + 1].newBottom + uBottomTrans
+	transformation.newTop = transformations[manHeight + 1].newTop + uTopTrans
+	transformation.newColor = transformations[manHeight + 1].newColor + uColorTrans
+	transformations[manHeight] = transformation
 }
 
 dLeftTrans = choose(-1,0,1)
@@ -54,14 +55,14 @@ dRightTrans = choose(-1,0,1)
 dTopTrans = choose(-1,0,1)
 dBottomTrans = choose(-1,0,1)
 dColorTrans = choose(-1,0,1)
-for (var yPos = (room_height/2) + 1; yPos < room_height; yPos++) {
+for (var manHeight = (room_height/2) + 1; manHeight < room_height; manHeight++) {
 	var transformation = instance_create_depth(0,0,0,oRectTransformation)
-	transformation.newLeft = transformations[yPos + 1] + dLeftTrans
-	transformation.newRight = transformations[yPos + 1] + dRightTrans
-	transformation.newBottom = transformations[yPos + 1] + dBottomTrans
-	transformation.newTop = transformations[yPos + 1] + dTopTrans
-	transformation.newColor = transformations[yPos + 1] + dColorTrans
-	transformations[yPos] = transformation
+	transformation.newLeft = transformations[manHeight - 1].newLeft + dLeftTrans
+	transformation.newRight = transformations[manHeight - 1].newRight + dRightTrans
+	transformation.newBottom = transformations[manHeight - 1].newBottom + dBottomTrans
+	transformation.newTop = transformations[manHeight - 1].newTop + dTopTrans
+	transformation.newColor = transformations[manHeight - 1].newColor + dColorTrans
+	transformations[manHeight] = transformation
 }
 	
 	

@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "57fdde3e-bc42-4342-ae43-73eb5f2107f5",
+            "Value": {
+                "id": "e4e092d7-b540-4857-b6c6-5af2f5fad43a",
+                "resourcePath": "scripts\\moveAndChange\\moveAndChange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "59b0cc66-a631-4bc0-81e1-cff0ab1c5ec1",
             "Value": {
                 "id": "499d4359-14ac-4418-8dfc-5f18a06d7a62",
@@ -253,10 +261,20 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "fb3d69cf-8236-40bd-85b3-520debe9fbaa",
+            "Value": {
+                "id": "269a98b8-e1b9-44ff-84c4-f58807ef25cb",
+                "resourcePath": "scripts\\applyTransformation\\applyTransformation.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
-        "db2f040e-0a56-421c-beb5-ab12a1adcd8e"
+        "db2f040e-0a56-421c-beb5-ab12a1adcd8e",
+        "57fdde3e-bc42-4342-ae43-73eb5f2107f5",
+        "fb3d69cf-8236-40bd-85b3-520debe9fbaa"
     ],
     "tutorial": ""
 }
